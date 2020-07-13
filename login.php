@@ -23,7 +23,7 @@
 </head>
 	<body id="boxbody">
 		<div class="loginbox">
-		<form method="post" action="authenticator.php">
+		<form method="post" action="middleware/authenticator.php">
 
 				<h1 >Login Form</h1>
 			<div class="textbox" >
