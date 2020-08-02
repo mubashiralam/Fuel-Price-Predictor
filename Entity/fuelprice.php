@@ -1,10 +1,14 @@
 <?php
 
 class FuelPrice {
-    private $pricePerGallon = 25.50;
+    private $pricePerGallon = 1.50;
 
     public function calculatePrice( $gallonsRequired ) {
-        //To Be Implemented
+        return $gallonsRequired * $this->pricePerGallon;
+    }
+
+    public function getPricePerGallon() {
+        return $this->pricePerGallon;
     }
 }
 ?>
