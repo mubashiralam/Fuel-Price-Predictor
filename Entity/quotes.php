@@ -41,13 +41,20 @@ class FuelQuote {
 
     public function getQuotationHistory( $username ) {
         $temp = array();
+        $flag = false;
 
         for ( $i = 0 ; $i < count($this->quoteArray) ; $i++ ) {
             if ( $this->quoteArray[$i]['USERNAME'] == $username ) {
                 array_push($temp, $this->quoteArray[$i]);
+                $flag = true;
             }
         }
-        return $temp;
+
+        if ( $flag ) {
+            return $temp;
+        }
+
+        return $flag;
     }
 
     public function addQuotation( $username, $date, $gallons, $totalPrice ) {
